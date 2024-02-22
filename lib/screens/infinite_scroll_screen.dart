@@ -11,7 +11,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text('ventana con una lista infinita'),
+      child: Text('Lista infinita'),
     );
   }
 }
