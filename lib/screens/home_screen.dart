@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practica3/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,26 +11,42 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Componentes de flutter'),
       ),
         body: ListView(
-          children: const <Widget>[
+          children: <Widget>[
               ListTile(
-                title: Text('Jeny sad'),
-                subtitle: Text('Huamantla - 14/feb/2024'),
-                leading: Icon(Icons.casino),
-                trailing: Icon(Icons.arrow_right_alt_rounded),
+                title: Text(
+                  'Entradas',
+                  style: AppTheme.lightTheme.textTheme.headlineLarge,
+                  ),
+                subtitle: Text(
+                  'Introduciendo valores',
+                  style: AppTheme.lightTheme.textTheme.bodySmall,
+                  ),
+                leading: const Icon(Icons.input_rounded),
+                trailing: const Icon(Icons.arrow_circle_right_rounded),
               ),
               Divider(),
               ListTile(
-                title: Text('Jeny feliz'),
-                subtitle: Text('Huamantla - 90/feb/2024'),
-                leading: Icon(Icons.price_check_sharp),
-                trailing: Icon(Icons.arrow_right_alt_rounded),
+                title: Text(
+                  'Listview.builder',
+                  style: AppTheme.lightTheme.textTheme.headlineLarge
+                  ),
+                subtitle: Text('Lista con scroll infinito',
+                style: AppTheme.lightTheme.textTheme.bodySmall,
+                ),
+                leading: const Icon(Icons.format_list_bulleted_rounded),
+                trailing: const Icon(Icons.arrow_circle_right_rounded),
               ),
               Divider(),
               ListTile(
-                title: Text('Jeny confundida'),
-                subtitle: Text('Huamantla - 99/feb/2024'),
-                leading: Icon(Icons.price_change_rounded),
-                trailing: Icon(Icons.arrow_right_alt_rounded),
+                title: Text(
+                  'Notificaciones',
+                  style: AppTheme.lightTheme.textTheme.headlineLarge
+                  ),
+                subtitle: Text('Mostrar notis',
+                style: AppTheme.lightTheme.textTheme.bodySmall,
+                ),
+                leading: const Icon(Icons.notification_important_rounded),
+                trailing: const Icon(Icons.arrow_circle_right_rounded),
               ),
             ],
         ),  
