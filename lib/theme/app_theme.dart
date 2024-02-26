@@ -4,16 +4,38 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme{
   //constante de un color primario
-  static const primaryColor = Color.fromARGB(223, 174, 29, 92);
+  static const primaryColor = Color.fromARGB(223, 115, 14, 58);
   //constante de un color secundario
-  static const secondaryColor = Color.fromARGB(255, 188, 159, 15); 
+  static const secondaryColor = Color.fromARGB(255, 13, 11, 32); 
   //constante de color de fondo
-  static const backColor = Color.fromARGB(227, 165, 206, 209);
+  static const backColor = Color.fromARGB(224, 252, 252, 252);
   //constante de tema
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     scaffoldBackgroundColor: backColor,
-        appBarTheme: const AppBarTheme(
+        appBarTheme: AppBarTheme(
           color: primaryColor,
+          titleTextStyle: GoogleFonts.lato(
+            color: Colors.white,
+            fontSize: 28.5,
+            fontWeight: FontWeight.bold,
+          ),
+      ),
+      iconTheme: const IconThemeData(
+        color: primaryColor,
+        size: 28.0,
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(
+            primaryColor,
+          ),
+          foregroundColor: MaterialStateProperty.all(
+            Colors.white,
+          ),
+          textStyle: MaterialStateProperty.all(
+            GoogleFonts.pacifico(fontSize: 22.0,)
+          ),
+        ),
       ),
       textTheme: TextTheme(
         //Titulos muy grandes

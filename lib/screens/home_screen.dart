@@ -23,22 +23,25 @@ class HomeScreen extends StatelessWidget {
             ),
             subtitle: Text(
               'Introducción de valores',
-               style: AppTheme.lightTheme.textTheme.bodySmall,
-              ),
-            leading: const Icon(Icons.import_contacts_sharp),
-            trailing: const Icon(Icons.arrow_circle_right_rounded),
-            
+              style: AppTheme.lightTheme.textTheme.bodySmall,
+            ),
+            leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.import_contacts_sharp),
+            ),
+            trailing: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.arrow_circle_right_rounded),
+            ),
             //agreganuevo
             onTap: () {
               final ruta1 = MaterialPageRoute(builder: (context) {
-                return const InputsScreen(); 
+                return const InputsScreen();
               });
-              Navigator.push(context,ruta1);
+              Navigator.push(context, ruta1);
             },
             //acaba lo nuevo
-          
           ),
-
           const Divider(),
           ListTile(
             title: Text(
@@ -47,22 +50,27 @@ class HomeScreen extends StatelessWidget {
             ),
             subtitle: Text(
               'Lista con desplazamiento infinito',
-               style: AppTheme.lightTheme.textTheme.bodySmall,
-              ),
-            leading: const Icon(Icons.format_list_bulleted),
-            trailing: const Icon(Icons.arrow_circle_right_rounded),
+              style: AppTheme.lightTheme.textTheme.bodySmall,
+            ),
+            leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.format_list_bulleted),
+            ),
+            trailing: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.arrow_circle_right_rounded),
+            ),
 
-             //agreganuevo
+            //agreganuevo
             onTap: () {
               final ruta2 = MaterialPageRoute(builder: (context) {
-                return const InfiniteScrollScreen(); 
+                return const InfiniteScrollScreen();
               });
-              Navigator.push(context,ruta2);
+              Navigator.push(context, ruta2);
             },
             //acaba lo nuevo
           ),
           const Divider(),
-
           ListTile(
             title: Text(
               'Notificaciones',
@@ -70,17 +78,23 @@ class HomeScreen extends StatelessWidget {
             ),
             subtitle: Text(
               'Mostrar una notificación',
-               style: AppTheme.lightTheme.textTheme.bodySmall,
-              ),
-            leading: const Icon(Icons.notifications_active),
-            trailing: const Icon(Icons.arrow_circle_right_rounded),
+              style: AppTheme.lightTheme.textTheme.bodySmall,
+            ),
+            leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.notifications_active),
+            ),
+            trailing: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.arrow_circle_right_rounded),
+            ),
 
-             //agreganuevo
+            //agreganuevo
             onTap: () {
               final ruta3 = MaterialPageRoute(builder: (context) {
-                return const NotificationsScreen(); 
+                return const NotificationsScreen();
               });
-              Navigator.push(context,ruta3);
+              Navigator.push(context, ruta3);
             },
             //acaba lo nuevo
           ),
