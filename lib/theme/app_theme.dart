@@ -9,12 +9,14 @@ class AppTheme{
   static const secondaryColor = Color.fromARGB(255, 13, 11, 32); 
   //constante de color de fondo
   static const backColor = Color.fromARGB(224, 252, 252, 252);
+  //constante de color
+  static const backColor2 = Color.fromARGB(223, 83, 145, 170);
   //constante de tema
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     scaffoldBackgroundColor: backColor,
         appBarTheme: AppBarTheme(
           color: primaryColor,
-          titleTextStyle: GoogleFonts.lato(
+          titleTextStyle: GoogleFonts.aBeeZee(
             color: Colors.white,
             fontSize: 28.5,
             fontWeight: FontWeight.bold,
@@ -27,19 +29,19 @@ class AppTheme{
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(
-            primaryColor,
+            backColor,
           ),
           foregroundColor: MaterialStateProperty.all(
-            Colors.white,
+            Colors.tealAccent,
           ),
           textStyle: MaterialStateProperty.all(
-            GoogleFonts.pacifico(fontSize: 22.0,)
+            GoogleFonts.pacifico(fontSize: 16.0,)
           ),
         ),
       ),
       textTheme: TextTheme(
         //Titulos muy grandes
-        headlineLarge: GoogleFonts.dancingScript(
+        headlineLarge: GoogleFonts.playfair(
           color: primaryColor,
           fontSize: 26.5,
           fontWeight: FontWeight.w500,
@@ -48,6 +50,11 @@ class AppTheme{
           decorationColor: primaryColor,
           decorationStyle: TextDecorationStyle.dotted,
           decorationThickness: 2.0,
+        ),
+        headlineMedium: GoogleFonts.montserrat(
+          color: secondaryColor,
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
         ),
         //Estilo para texto muy pequeño
         bodySmall: GoogleFonts.shadowsIntoLight(
