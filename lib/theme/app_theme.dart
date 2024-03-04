@@ -1,4 +1,3 @@
-//Definicion de los temas de estilo de la app
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -17,31 +17,33 @@ class _InputsScreenState extends State<InputsScreen> {
       appBar: AppBar(
         title: const Text('Entradas'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Text(
-            'Entradas',
-            style: AppTheme.lightTheme.textTheme.headlineLarge,
-          ),
-          entradaNombre(),
-          entradaSwitch(),
-          entradaSlider(),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ElevatedButton(
-                  onPressed: null,
-                  child: Text(
-                    'Regresar',
-                  )),
-              ElevatedButton(
-                  onPressed: null,
-                  child: Text(
-                    'Ventana de datos',
-                  )),
-            ],
-          ),
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            entradaNombre(),
+            entradaSwitch(),
+            entradaSlider(),
+            const ElevatedButton(
+                    onPressed: null,
+                    child: Text(
+                      'Guardar',
+                    )),
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color.fromARGB(223, 214, 188, 200),
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.cottage),
+            label: 'Inicio',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.data_exploration),
+              label: 'Datos',
+              ),
         ],
       ),
     );
@@ -91,7 +93,7 @@ class _InputsScreenState extends State<InputsScreen> {
             max: 10.0,
             divisions: 10,
             label: '${sliderValue.round()}',
-            activeColor: AppTheme.backColor2,
+            activeColor: const Color.fromARGB(223, 170, 83, 170),
             thumbColor: AppTheme.secondaryColor,
             inactiveColor: AppTheme.backColor,
             value: sliderValue,
