@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:practica3/screens/home_screen.dart';
+import 'package:practica3/screens/images_screen.dart';
+import 'package:practica3/screens/infinite_scroll_screen.dart';
+import 'package:practica3/screens/notifications_screen.dart';
 import 'package:practica3/theme/app_theme.dart';
 
 class InputsScreen extends StatefulWidget {
@@ -16,6 +20,29 @@ class _InputsScreenState extends State<InputsScreen> {
   bool isCheked1 = false;
   bool isCheked2 = false;
   bool isCheked3 = false;
+  int indexNavigation = 0;
+
+  openScreen(index, BuildContext context){
+    MaterialPageRoute ruta = MaterialPageRoute(builder: (context) => const HomeScreen());
+    switch(index){
+      case 0:
+      ruta = MaterialPageRoute(builder: (context) => const HomeScreen());
+      break;
+      case 1:
+       ruta = MaterialPageRoute(builder: (context) => const InfiniteScrollScreen());
+      break;
+      case 2:
+      ruta = MaterialPageRoute(builder: (context) => const NotificationsScreen());
+      break;
+      case 3:
+      ruta = MaterialPageRoute(builder: (context) => const ImageScreen());
+      break;
+    }
+    setState(() {
+      indexNavigation = index;
+      Navigator.push(context, ruta);
+    });
+  }
   //termina
   @override
   Widget build(BuildContext context) {
@@ -48,15 +75,32 @@ class _InputsScreenState extends State<InputsScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color.fromARGB(223, 214, 188, 200),
+        currentIndex: indexNavigation,
+        backgroundColor: Color.fromARGB(223, 234, 132, 180),
+        unselectedItemColor: AppTheme.primaryColor,
+        selectedItemColor: AppTheme.backColor2,
+        unselectedLabelStyle: const TextStyle(color: AppTheme.backColor2),
+        onTap: (index) => openScreen(index, context),
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.cottage),
             label: 'Inicio',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.data_exploration),
-            label: 'Datos',
+            icon: Icon(Icons.list_alt_rounded),
+            label: 'Lista',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notification_add_outlined),
+            label: 'Notificación',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.image),
+            label: 'Imagenes',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.exit_to_app_rounded),
+            label: 'Salida',
           ),
         ],
       ),
@@ -114,7 +158,7 @@ class _InputsScreenState extends State<InputsScreen> {
             onChanged: (value) {
               setState(() {
                 sliderValue = value;
-                print('Se cambio el slider: $sliderValue');
+                //print('Se cambio el slider: $sliderValue');
               });
             })
       ],
