@@ -16,7 +16,7 @@ class AppTheme{
         appBarTheme: AppBarTheme(
           color: primaryColor,
           titleTextStyle: GoogleFonts.aBeeZee(
-            color: Colors.white,
+            color: const Color.fromARGB(255, 176, 161, 161),
             fontSize: 28.5,
             fontWeight: FontWeight.bold,
           ),
@@ -31,7 +31,7 @@ class AppTheme{
             backColor,
           ),
           foregroundColor: MaterialStateProperty.all(
-            Colors.tealAccent,
+            Colors.blueAccent,
           ),
           textStyle: MaterialStateProperty.all(
             GoogleFonts.pacifico(fontSize: 16.0,)

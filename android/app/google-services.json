@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "357367421471",
+    "firebase_url": "https://app-colores-default-rtdb.firebaseio.com",
+    "project_id": "app-colores",
+    "storage_bucket": "app-colores.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357367421471:android:198b052cf58b6a80ca532a",
+        "android_client_info": {
+          "package_name": "com.example.appcolores"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrOvbsyErAgOtFBaRVMYIomsLD6D1OobE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357367421471:android:1336047fa7648649ca532a",
+        "android_client_info": {
+          "package_name": "com.example.practica3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrOvbsyErAgOtFBaRVMYIomsLD6D1OobE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

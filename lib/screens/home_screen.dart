@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:practica3/screens/data_screen.dart';
 import 'package:practica3/screens/images_screen.dart';
 import 'package:practica3/screens/infinite_scroll_screen.dart';
 import 'package:practica3/screens/inputs_screen.dart';
